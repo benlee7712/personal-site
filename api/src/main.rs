@@ -1,10 +1,21 @@
 use actix_files as fs;
-use actix_web::{App, HttpServer};
+use actix_web::{HttpRequest, Result};
+use actix_files::NamedFile;
+use std::path::PathBuf;
+
+async fn index(_req: HttpRequest) -> Result<NamedFile> {
+    let path: PathBuf = "../frontend/dist/index.html".parse().unwrap();
+    Ok(NamedFile::open(path)?)
+}
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| App::new().service(fs::Files::new("../frontend/dist", ".").show_files_listing()))
-        .bind(("0.0.0.0", 8080))?
-        .run()
-        .await
+    use actix_web::{web, App, HttpServer};
+
+    HttpServer::new(|| App::new()
+        .route("/", web::get().to(index))
+        .service(fs::Files::new("/static", "../frontend/dist").show_files_listing()))
+            .bind("127.0.0.1:8080")?
+            .run()
+            .await
 }
