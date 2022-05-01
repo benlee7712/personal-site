@@ -19,6 +19,9 @@ EXPOSE 8080
 
 RUN mkdir frontend
 RUN mkdir api
+
 COPY --from=frontend-build . /frontend
 COPY --from=builder . /api
-CMD ["./api/target/release/personal-site"]
+WORKDIR /api
+
+CMD ["./target/release/personal-site"]
