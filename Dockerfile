@@ -1,28 +1,18 @@
-FROM node:alpine as frontend-build
+FROM rust:1.60
 
-COPY /frontend .
+COPY . .
 
-RUN npm install
-RUN npm run build
-
-FROM rust:1.60 as builder
-
-COPY /api .
-
+WORKDIR /api
 RUN apt-get update && apt-get -y install ca-certificates cmake musl-tools libssl-dev && rm -rf /var/lib/apt/lists/*
+RUN rustup target add x86_64-unknown-linux-musl
 ENV PKG_CONFIG_ALLOW_CROSS=1
+
 RUN cargo build --target x86_64-unknown-linux-musl --release
+WORKDIR /..
 
-FROM alpine:latest
 EXPOSE 8080
-
 RUN apk --no-cache add ca-certificates 
 
-RUN mkdir frontend
-RUN mkdir api
-
-COPY --from=frontend-build . /frontend
-COPY --from=builder . /api
 WORKDIR /api
 
 CMD ["./target/x86_64-unknown-linux-musl/release/personal-site"]
