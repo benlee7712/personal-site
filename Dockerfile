@@ -11,7 +11,6 @@ RUN cargo build --target x86_64-unknown-linux-musl --release
 WORKDIR /..
 
 EXPOSE 8080
-RUN apk --no-cache add ca-certificates 
 
 WORKDIR /api
 
