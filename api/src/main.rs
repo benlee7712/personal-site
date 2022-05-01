@@ -1,6 +1,5 @@
-use actix_files as fs;
 use actix_web::{HttpRequest, Result};
-use actix_files::NamedFile;
+use actix_files::{Files, NamedFile};
 use std::path::PathBuf;
 
 async fn index(_req: HttpRequest) -> Result<NamedFile> {
@@ -14,7 +13,7 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(|| App::new()
         .route("/", web::get().to(index))
-        .service(fs::Files::new("/static", "../frontend/dist").show_files_listing()))
+        .service(Files::new("/static", "../frontend/dist").show_files_listing()))
             .bind("127.0.0.1:8080")?
             .run()
             .await
