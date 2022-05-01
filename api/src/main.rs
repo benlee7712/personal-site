@@ -4,7 +4,7 @@ use std::path::PathBuf;
 
 /// https://actix.rs/docs/static-files/
 async fn index(_req: HttpRequest) -> Result<NamedFile> {
-    let path: PathBuf = "./src/dist/index.html".parse().unwrap();
+    let path: PathBuf = "../frontend/dist/index.html".parse().unwrap();
     Ok(NamedFile::open(path)?)
 }
 
