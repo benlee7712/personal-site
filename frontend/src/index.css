@@ -91,12 +91,12 @@ h1 {
 }
 
 .hidden-title {
-    color: #fff;
-    left: -20px;
-    transition: left .5s ease-in-out, color .5s;
+    opacity: 0;
+    margin-left: -20px;
+    transition: margin-left .5s ease-in-out, opacity .5s;
 }
 
 .name-title:hover .hidden-title {
-    color: #64748b;
-    left: 0;
+    opacity: 1;
+    margin-left: 0;
 }
