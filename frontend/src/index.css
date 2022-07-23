@@ -77,3 +77,26 @@ h1 {
     font-weight: bold;
     font-size: 10vh;
 }
+
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#e83577, #e83577);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.link-underline:hover {
+    background-size: 100% 100%;
+}
+
+.hidden-title {
+    color: #fff;
+    left: -20px;
+    transition: left .5s ease-in-out, color .5s;
+}
+
+.name-title:hover .hidden-title {
+    color: #64748b;
+    left: 0;
+}
