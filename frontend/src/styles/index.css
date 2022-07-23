@@ -1,0 +1,68 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-Bold.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-ExtraLight.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-ExtraLight.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-Light.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-Light.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-Medium.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-Regular.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-SemiBold.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-SemiBold.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Humane';
+    src: url('assets/fonts/Humane/Web-PS/Humane-Thin.woff2') format('woff2'), /* Modern Browsers */
+         url('assets/fonts/Humane/Web-PS/Humane-Thin.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: thin;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
