@@ -5,9 +5,9 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header class="mt-0 fixed w-full z-10 top-0 py-8 bg-white/40">
     <div class="flex-wrap flex mx-auto">
-      <div class="flex w-1/2 justify-start content-start">
+      <RouterLink to="/" class="flex w-1/2 justify-start content-start">
         <h1 class="flex flex-none justify-start pl-8 sm:pl-16 text-slate-600 font-semibold font-rubik text-6xl md:text-8xl name-title">B<h1 class="text-slate-600 font-semibold font-rubik text-6xl md:text-8xl hidden-title hidden lg:inline">en Lee</h1></h1>
-      </div>
+      </RouterLink>
       <div class="flex w-1/2 content-center justify-end pr-2 md:pr-8 lg:pr-16 z-15">
         <nav class="list-reset flex justify-between flex-none items-center">
           <div class="px-1 sm:px-3 md:px-6 border-r-[1px] border-black">
