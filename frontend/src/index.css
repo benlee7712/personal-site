@@ -115,12 +115,20 @@ h1 {
     margin-left: 0;
 }
 
-.short-underline-coral {
-    background-image: linear-gradient(#FF6F5F,#FF6F5F);
-    background-size: 1.5em 0.1em;
-    background-position: 0 100%;
+.corner-borders-coral {
+    background: linear-gradient(to right, #FF6F5F 0.15em, transparent 0.15em) 0 100%,
+                linear-gradient(to left, #FF6F5F 0.15em, transparent 0.15em) 100% 0,
+                linear-gradient(to bottom, #FF6F5F 0.15em, transparent 0.15em) 100% 0,
+                linear-gradient(to top, #FF6F5F 0.15em, transparent 0.15em) 0 100%;
     background-repeat: no-repeat;
-    padding-bottom: 0.35em;
+    background-size: 1em 1em;
+    padding: 3em 1em;
+}
+
+@media (min-width: 640px) {
+    .corner-borders-coral {
+        padding: 3em 5em;
+    }
 }
 
 @keyframes slideInFromTop {
