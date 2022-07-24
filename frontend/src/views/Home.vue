@@ -11,13 +11,12 @@
                     <img class="move-up-down m-auto w-[20vw] h-[5vh]" src="../assets/icons/down-arrow.svg">
                 </div>
             </div>
-            <div class="section bg-slate">
-                <div class="w-full h-[100vh] flex justify-center items-center fade-slide-in-top">
-                    <h2 class="py-1 mx-[15%] sm:mx-[25%] translate-y-[-25%] font-open text-3xl sm:text-6xl text-white text-left align-middle short-underline-coral leading-normal">
-                        I love working with all different kinds of technology... and learning new ones.
+            <div class="section section-2 bg-slate">
+                <div class="w-full h-[100vh] flex justify-center items-center">
+                    <h2 class="py-1 mx-[15%] sm:mx-[25%] translate-y-[-25%] font-open text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-white text-left align-middle leading-normal">
+                        I <h2 class="inline bg-coral rounded px-[2px]">love</h2> working with all different kinds of technology... and learning new ones.
                     </h2>
                 </div>
-                <img class="bottom-0 flex" src="../assets/icons/down-arrow.svg">
             </div>
         </full-page>
     </body>
