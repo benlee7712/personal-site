@@ -12,6 +12,8 @@ module.exports = {
     },
     colors: {
       coral: '#FF6F5F',
+      lime: '#5FFF6F',
+      lapis: '#6F5FFF',
     },
     extend: {},
   },
