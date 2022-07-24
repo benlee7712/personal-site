@@ -27,6 +27,7 @@ module.exports = {
       lime: '#5FFF6F',
       lapis: '#6F5FFF',
       slate: '#222',
+      white: '#FFF',
     },
     extend: {},
   },
