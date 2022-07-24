@@ -13,8 +13,8 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(|| App::new()
         .route("/", web::get().to(index))
-        .service(Files::new("/static", "../frontend/dist").show_files_listing()))
             .bind("0.0.0.0:8080")?
+        .service(Files::new("/", "../frontend/dist").show_files_listing()))
             .run()
             .await
 }
