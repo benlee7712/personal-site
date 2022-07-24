@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header class="mt-0 fixed w-full z-10 top-0 py-8">
+  <header class="mt-0 fixed w-full z-10 top-0 py-8 bg-white/40">
     <div class="flex-wrap flex mx-auto">
       <div class="flex w-1/2 justify-start content-start">
         <h1 class="flex flex-none justify-start pl-8 sm:pl-16 text-slate-600 font-semibold font-rubik text-6xl md:text-8xl name-title">B<h1 class="text-slate-600 font-semibold font-rubik text-6xl md:text-8xl hidden-title hidden lg:inline">en Lee</h1></h1>
