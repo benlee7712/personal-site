@@ -1,6 +1,6 @@
 <template>
   <div class="photo">
-    <h1>This is a page with my photos</h1>
+    <h1 class="w-full text-center text-4xl sm:text-6xl font-open">Coming soon...</h1>
   </div>
 </template>
 
