@@ -11,13 +11,13 @@ import { RouterLink, RouterView } from "vue-router";
       <div class="flex w-1/2 content-center justify-end pr-2 md:pr-8 lg:pr-16 z-15">
         <nav class="list-reset flex justify-between flex-none items-center">
           <div class="px-1 sm:px-3 md:px-6 border-r-[1px] border-black">
-            <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-underline" to="/">Home</RouterLink>
+            <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-highlight" to="/">Home</RouterLink>
           </div>
           <div class="px-1 sm:px-3 md:px-6 border-r-[1px] border-black">
-            <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-underline" to="/photography">Photography</RouterLink>
+            <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-highlight" to="/photography">Photography</RouterLink>
           </div>
           <div class="px-1 sm:px-3 md:px-6">
-            <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-underline" to="/contact-me">Contact Me</RouterLink>
+            <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-highlight" to="/contact-me">Contact Me</RouterLink>
           </div>
         </nav>
       </div>

@@ -78,7 +78,7 @@ h1 {
     font-size: 10vh;
 }
 
-.link-underline {
+.link-highlight {
     border-bottom-width: 0;
     border-radius: 0.25rem;
     background-image: linear-gradient(transparent, transparent), linear-gradient(#FF6F5F, #FF6F5F);
@@ -87,7 +87,7 @@ h1 {
     transition: background-size .5s ease-in-out;
 }
 
-.link-underline:hover {
+.link-highlight:hover {
     background-size: 100% 100%;
 }
 
