@@ -137,3 +137,19 @@ h1 {
 .fade-slide-in-top {
     animation: 0.5s ease-out 0s 1 slideInFromTop;
 }
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.move-up-down {
+    animation: 1.5s ease 0s infinite moveUpDown;
+}
