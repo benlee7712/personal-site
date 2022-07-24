@@ -5,5 +5,6 @@
                 Hi. I'm <h2 class="inline highlight-coral">Ben Lee,</h2> a Software Developer at Kayenta. Nice to meet you.
             </h2>
         </div>
+        <img class="bottom-0 flex" src="../assets/icons/down-arrow.svg">
     </body>
 </template>
