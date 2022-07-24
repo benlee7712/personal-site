@@ -10,6 +10,9 @@ module.exports = {
       'humane': ['Humane'],
       'open': ['Open Sans', 'sans-serif'],
     },
+    colors: {
+      coral: '#FF6F5F',
+    },
     extend: {},
   },
   plugins: [],
