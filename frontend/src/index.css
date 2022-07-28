@@ -173,22 +173,10 @@ h1 {
   
 @keyframes slidelogo {
     0% {
-        transform: translateX(0%);
+        transform: translateX(100%);
     }
-    99.999999% {
+    100% {
         transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes slidelogo2 {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0%);
     }
 }
 
@@ -233,7 +221,7 @@ h1 {
 .scrolling-icons-slide {
     position: absolute;
     flex-shrink: 0;
-    animation: 20s linear 0s infinite slidelogo;
+    animation: 25s linear 0s infinite slidelogo;
     min-width: 100%;
     display: flex;
     justify-content: space-around;
@@ -241,7 +229,7 @@ h1 {
 
 .scrolling-icons-slide.delay {
     transform: translateX(100%);
-    animation: 20s linear 0s infinite slidelogo2;
+    animation: 25s linear 12.5s infinite slidelogo;
 }
 
 .scrolling-icons-wheel:hover .scrolling-icons-slide {
@@ -249,8 +237,7 @@ h1 {
 }
 
 .icon {
-    height: 10vh;
-    width: 10vh;
+    height: 8vh;
     display: inline-flex;
     align-self: center;
     animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
