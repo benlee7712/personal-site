@@ -1,5 +1,6 @@
 import Home from "../views/Home.vue"
-import Photography from "../views/Photography.vue";
+import Contact from "../views/Contact.vue";
+import About from "../views/About.vue";
 
 export default [
     {
@@ -10,10 +11,17 @@ export default [
         },
     },
     {
-        path: "/photography",
-        component: Photography,
+        path: "/contact",
+        component: Contact,
         meta: {
-          title: "Photography",
+          title: "Contact",
+        },
+    },
+    {
+        path: "/about",
+        component: About,
+        meta: {
+          title: "About",
         },
     },
 ];
