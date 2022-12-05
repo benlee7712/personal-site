@@ -11,7 +11,8 @@
   "dependencies": {
     "vue": "^3.2.33",
     "vue-fullpage.js": "^0.2.5",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vue3-carousel": "^0.2.8"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
