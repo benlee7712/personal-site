@@ -23,5 +23,5 @@ import { RouterLink, RouterView } from "vue-router";
       </div>
     </div>
   </header>
-  <RouterView class="selection:bg-coral"/>
+  <RouterView class="selection:bg-dusty_red"/>
 </template>

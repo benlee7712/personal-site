@@ -8,6 +8,10 @@
 @tailwind utilities;
 /* purgecss end ignore */
 
+html {
+    background-color: #FEF9F4;
+}
+
 h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
