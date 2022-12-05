@@ -6,9 +6,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'rubik': ['Rubik', 'sans-serif'],
-      'humane': ['Humane'],
-      'open': ['Open Sans', 'sans-serif'],
+      'oswald': ['Oswald', 'sans-serif'],
+      'cormorant': ['Cormorant Garamond', 'serif'],
+      'outfit': ['Outfit', 'sans-serif'],
     },
     fontSize: {
       'xs': ['0.75rem', '1rem'],
@@ -24,6 +24,7 @@ module.exports = {
     },
     colors: {
       coral: '#FF6F5F',
+      dusty_red: '#E13F3F',
       lime: '#5FFF6F',
       lapis: '#6F5FFF',
       slate: '#222',
