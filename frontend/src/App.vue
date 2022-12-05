@@ -5,10 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header class="mt-0 fixed w-full z-10 top-0 py-8">
     <div class="flex-wrap flex mx-auto">
-      <RouterLink to="/" class="flex w-1/2 justify-start content-start">
-        <h1 class="flex flex-none justify-start pl-8 sm:pl-16 font-semibold font-rubik text-6xl md:text-8xl name-title">B<h1 class="font-semibold font-rubik text-6xl md:text-8xl hidden-title hidden lg:inline">en Lee</h1></h1>
-      </RouterLink>
-      <div class="flex w-1/2 content-center justify-end pr-2 md:pr-8 lg:pr-16 z-15">
+      <div class="flex w-1/2 content-start justify-start pl-2 md:pl-8 lg:pl-16 z-15">
         <nav class="list-reset flex justify-between flex-none items-center">
           <div class="px-1 sm:px-3 md:px-6 border-r-[1px] border-black">
             <RouterLink class="px-[2px] md:px-2 pb-[2px] text-base sm:text-lg md:text-xl lg:text-2xl font-open link-highlight" to="/">Home</RouterLink>
@@ -21,6 +18,9 @@ import { RouterLink, RouterView } from "vue-router";
           </div>
         </nav>
       </div>
+      <RouterLink to="/" class="flex w-1/2 justify-end content-end">
+        <h1 class="flex flex-none justify-end pr-8 sm:pr-16 font-semibold font-oswald text-6xl md:text-8xl name-title">BEN LEE</h1>
+      </RouterLink>
     </div>
   </header>
   <RouterView class="selection:bg-dusty_red"/>
