@@ -1,16 +1,69 @@
 <template>
     <body>
-        <full-page>
-            <div class="section section-1 h-screen">
-                <div class="w-full flex fade-slide-in-top">
-                    <h2 class="py-1 mx-[10%] sm:mx-[10%] font-open text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl text-slate text-left align-middle corner-borders-coral leading-normal">
-                        Hi. I'm <h2 class="inline bg-dusty_red rounded px-[2px]">Ben Lee,</h2> a Software Developer at <a href="https://kayenta.io" class="text-lapis link-underline">Kayenta.</a> Nice to meet you.
-                    </h2>
-                </div>
-                <div class="w-full mt-auto h-[10vh] bottom-0 absolute">
-                    <img class="m-auto w-[20vw] h-[5vh]" src="../assets/icons/down-arrow.svg">
-                </div>
-            </div>
-        </full-page>
+        <Carousel id="project_titles" :items-to-show="4" :wrap-around="false" v-model="currentSlide">
+            <Slide v-for="slide in 9" :key="slide">
+                <div class="carousel__item">{{ slide }}</div>
+            </Slide>
+        </Carousel>
+
+        <Carousel
+            id="thumbnails"
+            :items-to-show="2.5"
+            :wrap-around="true"
+            v-model="currentSlide"
+            ref="carousel"
+        >
+            <Slide :key="1"><div class="carousel__item" @click="slideTo(2)">
+                <img src="@/assets/images/_MG_7395_browsable.jpg">
+            </div></Slide>
+            <Slide :key="2"><div class="carousel__item" @click="slideTo(3)">
+                <img src="@/assets/images/_MG_7015_browsable.jpg">
+            </div></Slide>
+            <Slide :key="3"><div class="carousel__item" @click="slideTo(4)">
+                <img src="@/assets/images/_MG_7246_browsable.jpg">
+            </div></Slide>
+            <Slide :key="4"><div class="carousel__item" @click="slideTo(5)">
+                <img src="@/assets/images/_MG_7407_browsable.jpg">
+            </div></Slide>
+            <Slide :key="5"><div class="carousel__item" @click="slideTo(6)">
+                <img src="@/assets/images/_MG_7571_browsable.jpg">
+            </div></Slide>
+            <Slide :key="6"><div class="carousel__item" @click="slideTo(7)">
+                <img src="@/assets/images/_MG_7741_browsable.jpg">
+            </div></Slide>
+            <Slide :key="7"><div class="carousel__item" @click="slideTo(8)">
+                <img src="@/assets/images/_MG_6478_browsable.jpg">
+            </div></Slide>
+            <Slide :key="8"><div class="carousel__item" @click="slideTo(9)">
+                <img src="@/assets/images/_MG_6320_browsable.jpg">
+            </div></Slide>
+            <Slide :key="9"><div class="carousel__item" @click="slideTo(1)">
+                <img src="@/assets/images/_MG_7715_browsable.jpg">
+            </div></Slide>
+        </Carousel>
     </body>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { Carousel, Slide } from 'vue3-carousel'
+
+import "../css/carousel.css"
+
+export default defineComponent({
+  name: 'Projects',
+  components: {
+    Carousel,
+    Slide,
+    Navigator,
+  },
+  data: () => ({
+    currentSlide: 0,
+  }),
+  methods: {
+    slideTo(val: number) {
+      this.currentSlide = val
+    },
+  },
+})
+</script>
