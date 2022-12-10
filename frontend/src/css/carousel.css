@@ -1,50 +1,63 @@
 .carousel {
-    position: absolute;
-    text-align: center;
-    box-sizing: border-box;
-    bottom: 0;
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  bottom: 0;
 }
 
 #project_titles.carousel {
-    bottom: 50vh;
+  bottom: 50vh;
+}
+
+#thumbnails.carousel {
+  width: 100vw;
+  overflow: hidden;
 }
 
 .carousel * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .carousel__track {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .carousel__viewport {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .carousel__sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 #project_titles .carousel__item {
-    height: 300px;
-    background-color: rgba(0, 0, 255, 0.5);
+  height: 300px;
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
-#thumbnails .carousel__item {
-    max-height: 40vh;
-    max-width: 35vw;
-    cursor: pointer;
-    background-color: rgba(255, 0, 0, 0.5);
+#thumbnails .carousel__item img {
+  max-height: 50vh;
+  max-width: 35vw;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#thumbnails .carousel__slide--sliding .carousel__item img {
+  transition: 0.5s;
+}
+
+#thumbnails .carousel__slide--active .carousel__item img {
+  opacity: 1;
 }
 
 .carousel__prev,
@@ -99,15 +112,18 @@
 }
 
 .carousel__slide {
-    scroll-snap-stop: auto;
-    flex-shrink: 0;
-    margin: 0;
-    position: relative;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    /* Fix iOS scrolling #22 */
-    transform: translateZ(0);
+  scroll-snap-stop: auto;
+  flex-shrink: 0;
+  margin: 0;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  width: auto !important;
+  padding: 0 2vw;
+
+  /* Fix iOS scrolling #22 */
+  transform: translateZ(0);
 }
