@@ -1,0 +1,113 @@
+.carousel {
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    bottom: 0;
+}
+
+#project_titles.carousel {
+    bottom: 50vh;
+}
+
+.carousel * {
+    box-sizing: border-box;
+}
+
+.carousel__track {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.carousel__viewport {
+    overflow: hidden;
+}
+
+.carousel__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+#project_titles .carousel__item {
+    height: 300px;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+#thumbnails .carousel__item {
+    max-height: 40vh;
+    max-width: 35vw;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
+  background: var(--vc-nav-background);
+  border-radius: var(--vc-nav-border-radius);
+  width: var(--vc-nav-width);
+  height: var(--vc-nav-height);
+  text-align: center;
+  font-size: var(--vc-nav-height);
+  padding: 0;
+  color: var(--vc-nav-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: 0;
+  cursor: pointer;
+  margin: 0 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel__prev:hover,
+.carousel__next:hover {
+  color: var(--vc-nav-color-hover);
+}
+
+.carousel__next--disabled,
+.carousel__prev--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.carousel__prev {
+  left: 0;
+}
+
+.carousel__next {
+  right: 0;
+}
+
+.carousel--rtl .carousel__prev {
+  left: auto;
+  right: 0;
+}
+
+.carousel--rtl .carousel__next {
+  right: auto;
+  left: 0;
+}
+
+.carousel__slide {
+    scroll-snap-stop: auto;
+    flex-shrink: 0;
+    margin: 0;
+    position: relative;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Fix iOS scrolling #22 */
+    transform: translateZ(0);
+}
