@@ -13,31 +13,31 @@
             v-model="currentSlide"
             ref="carousel"
         >
-            <Slide :key="1"><div class="carousel__item" @click="slideTo(2)">
+            <Slide :key="1"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7395_browsable.jpg">
             </div></Slide>
-            <Slide :key="2"><div class="carousel__item" @click="slideTo(3)">
+            <Slide :key="2"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7015_browsable.jpg">
             </div></Slide>
-            <Slide :key="3"><div class="carousel__item" @click="slideTo(4)">
+            <Slide :key="3"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7246_browsable.jpg">
             </div></Slide>
-            <Slide :key="4"><div class="carousel__item" @click="slideTo(5)">
+            <Slide :key="4"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7407_browsable.jpg">
             </div></Slide>
-            <Slide :key="5"><div class="carousel__item" @click="slideTo(6)">
+            <Slide :key="5"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7571_browsable.jpg">
             </div></Slide>
-            <Slide :key="6"><div class="carousel__item" @click="slideTo(7)">
+            <Slide :key="6"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7741_browsable.jpg">
             </div></Slide>
-            <Slide :key="7"><div class="carousel__item" @click="slideTo(8)">
+            <Slide :key="7"><div class="carousel__item">
                 <img src="@/assets/images/_MG_6478_browsable.jpg">
             </div></Slide>
-            <Slide :key="8"><div class="carousel__item" @click="slideTo(9)">
+            <Slide :key="8"><div class="carousel__item">
                 <img src="@/assets/images/_MG_6320_browsable.jpg">
             </div></Slide>
-            <Slide :key="9"><div class="carousel__item" @click="slideTo(1)">
+            <Slide :key="9"><div class="carousel__item">
                 <img src="@/assets/images/_MG_7715_browsable.jpg">
             </div></Slide>
         </Carousel>
