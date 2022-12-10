@@ -2,7 +2,8 @@
   position: absolute;
   text-align: center;
   box-sizing: border-box;
-  bottom: 0;
+  overflow: hidden;
+  width: 100vw;
 }
 
 #project_titles.carousel {
@@ -10,8 +11,7 @@
 }
 
 #thumbnails.carousel {
-  width: 100vw;
-  overflow: hidden;
+  bottom: 0;
 }
 
 .carousel * {
@@ -41,8 +41,7 @@
 }
 
 #project_titles .carousel__item {
-  height: 300px;
-  background-color: rgba(0, 0, 255, 0.5);
+  padding: 0 5vw 10vh 5vw;
 }
 
 #thumbnails .carousel__item img {
@@ -121,9 +120,12 @@
   justify-content: center;
   align-items: end;
 
-  width: auto !important;
-  padding: 0 2vw;
+  width: auto;
 
   /* Fix iOS scrolling #22 */
   transform: translateZ(0);
+}
+
+#project_titles .carousel__slide {
+  justify-content: start;
 }
