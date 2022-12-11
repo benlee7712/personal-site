@@ -48,7 +48,6 @@ import { useMediaQuery } from '@vueuse/core'
 import "../css/carousel.css"
 
 const isDesktop = useMediaQuery('(min-width: 640px)')
-console.log(isDesktop.value)
 
 export default defineComponent({
   name: 'Projects',
