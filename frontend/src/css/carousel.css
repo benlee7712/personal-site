@@ -11,7 +11,7 @@
 }
 
 #thumbnails.carousel {
-  bottom: 0;
+  bottom: 7.5vh;
 }
 
 .carousel * {
@@ -49,13 +49,6 @@
   max-width: 60vw;
   cursor: pointer;
   opacity: 0.4;
-}
-
-@media (min-width: 640px) {
-  #thumbnails .carousel__item img {
-    max-height: 50vh;
-    max-width: 37.5vw;
-  }
 }
 
 #thumbnails .carousel__slide--sliding .carousel__item img {
@@ -122,17 +115,27 @@
   flex-shrink: 0;
   margin: 0;
   position: relative;
-
+  
   display: flex;
   justify-content: center;
   align-items: end;
-
+  
   width: auto;
-
+  
   /* Fix iOS scrolling #22 */
   transform: translateZ(0);
 }
 
 #project_titles .carousel__slide {
   justify-content: start;
+}
+
+@media (min-width: 640px) {
+  #thumbnails .carousel__item img {
+    max-height: 50vh;
+    max-width: 37.5vw;
+  }
+  #thumbnails.carousel {
+    bottom: 0;
+  }
 }

@@ -37,6 +37,9 @@
                 <img src="@/assets/images/_MG_6320_browsable.jpg">
             </div></Slide>
         </Carousel>
+        <div class="flex fixed bottom-0 sm:hidden w-full justify-center items-center h-[7.5vh]">
+            <h1 class="text-dusty_red text-lg font-outfit">[ SEE PROJECT ]</h1>
+        </div>
     </body>
 </template>
 
