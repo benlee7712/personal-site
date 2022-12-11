@@ -17,7 +17,7 @@
                 <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[3.7rem] 2xl:pt-[8.7rem] pl-1 md:pl-2">[2022]</p>
             </div></Slide>
         </Carousel>
-        <div class="fixed link-highlight right-[5vw] bottom-[57.5vh] sm:bottom-[60vh] cursor-pointer" @click="slideTo(currentSlide + 1)">
+        <div class="next-arrow fixed link-highlight right-[5vw] bottom-[56vh] sm:bottom-[60vh] cursor-pointer" @click="slideTo(currentSlide + 1)">
             <img class="h-8 md:h-10 2xl:h-16 px-2 float-right" src="@/assets/icons/next-arrow.svg">
             <h1 class="text-2xl md:text-4xl 2xl:text-6xl font-outfit font-medium float-right pl-2">ANOTHER</h1>
         </div>
@@ -43,8 +43,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { Carousel, Slide } from 'vue3-carousel'
+import { useMediaQuery } from '@vueuse/core'
 
 import "../css/carousel.css"
+
+const isDesktop = useMediaQuery('(min-width: 640px)')
+console.log(isDesktop.value)
 
 export default defineComponent({
   name: 'Projects',
@@ -56,9 +60,9 @@ export default defineComponent({
   data: () => ({
     currentSlide: 0,
     thumbnailCarouselSettings: {
-        itemsToShow: 2.25,
+        itemsToShow: ((isDesktop.value) ? 2.25 : 1.5),
         wrapAround: true,
-        snapAlign: 'center',
+        snapAlign: ((isDesktop.value) ? 'center' : 'start'),
     },
   }),
   methods: {
