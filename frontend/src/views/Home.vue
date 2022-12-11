@@ -2,19 +2,19 @@
     <body>
         <Carousel id="project_titles" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
             <Slide :key="0"><div class="carousel__item">
-                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-cormorant font-light w-fit">LOS</h1>
-                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-oswald float-left">ANGELES</h1>
-                <p class="text-lg font-outfit font-medium text-dusty_red float-left lg:pt-[8.7rem]">[2022]</p>
-            </div></Slide>
-            <Slide :key="1"><div class="carousel__item">
-                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-oswald float-left">CORFU</h1>
-                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-none font-cormorant font-light float-left lg:pt-24 lg:pl-4">GREECE</h1>
-                <p class="text-lg font-outfit font-medium text-dusty_red w-fit pl-2">[2022]</p>
+                <h1 class="text-3xl sm:text-5xl md:text-6xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">USA</h1>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl 2xl:text-9xl font-oswald float-left">CALIFORNIA</h1>
+                <p class="text-lg font-outfit font-medium text-dusty_red float-left 2xl:pt-[8.7rem] pl-2">[2022]</p>
             </div></Slide>
             <Slide :key="2"><div class="carousel__item">
-                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl lg:mb-[-1rem] font-cormorant font-light w-fit">GREECE</h1>
-                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-9xl font-oswald float-left">SANTORINI</h1>
-                <p class="text-lg font-outfit font-medium text-dusty_red float-left lg:pt-[8.7rem]">[2022]</p>
+                <h1 class="text-3xl sm:text-5xl md:text-6xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">GREECE</h1>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl 2xl:text-9xl font-oswald float-left">CORFU</h1>
+                <p class="text-lg font-outfit font-medium text-dusty_red float-left 2xl:pt-[8.7rem] pl-2">[2022]</p>
+            </div></Slide>
+            <Slide :key="2"><div class="carousel__item">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">GREECE</h1>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl 2xl:text-9xl font-oswald float-left">SANTORINI</h1>
+                <p class="text-lg font-outfit font-medium text-dusty_red float-left 2xl:pt-[8.7rem] pl-2">[2022]</p>
             </div></Slide>
         </Carousel>
 
