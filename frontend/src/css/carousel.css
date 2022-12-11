@@ -46,9 +46,9 @@
 
 #thumbnails .carousel__item img {
   max-height: 50vh;
-  max-width: 35vw;
+  max-width: 37.5vw;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 #thumbnails .carousel__slide--sliding .carousel__item img {
