@@ -11,7 +11,7 @@
 }
 
 #thumbnails.carousel {
-  bottom: 7.5vh;
+  bottom: 12.5vh;
 }
 
 .carousel * {
@@ -46,7 +46,8 @@
 
 #thumbnails .carousel__item img {
   max-height: 30vh;
-  max-width: 60vw;
+  max-width: 70vw;
+  padding-left: 5vw;
   cursor: pointer;
   opacity: 0.4;
 }
@@ -117,7 +118,7 @@
   position: relative;
   
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: end;
   
   width: auto;

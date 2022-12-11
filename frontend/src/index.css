@@ -18,16 +18,29 @@ h1 {
     font-size: 10vh;
 }
 
-.link-highlight {
+.link-highlight, .link-highlight-mobile {
     border-bottom-width: 0;
     border-radius: 0.25rem;
     background-image: linear-gradient(transparent, transparent), linear-gradient(#E13F3F, #E13F3F);
-    background-size: 0 100%;
     background-repeat: no-repeat;
     transition: background-size .5s ease-in-out;
 }
 
-.link-highlight:hover {
+.link-highlight {
+    background-size: 0 100%;
+}
+
+.link-highlight-mobile {
+    background-size: 100% 100%;
+}
+
+@media (min-width: 640px) {
+    .link-highlight-mobile {
+        background-size: 0 100%;
+    }
+}
+
+.link-highlight:hover,.link-highlight-mobile:hover {
     background-size: 100% 100%;
 }
 
