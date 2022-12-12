@@ -43,3 +43,8 @@ h1 {
 .link-underline:hover {
     background-size: 100% 5%;
 }
+
+.red-underline {
+    text-decoration: underline #E13F3F;
+    text-underline-offset: 4px;
+}
