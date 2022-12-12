@@ -1,20 +1,10 @@
 <template>
     <body class="overflow-hidden">
         <Carousel id="project_titles" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
-            <Slide :key="0"><div class="carousel__item">
-                <h1 class="text-3xl sm:text-[2.5rem] md:text-4xl lg:text-5xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">USA</h1>
-                <h1 class="text-6xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl font-oswald float-left">CALIFORNIA</h1>
-                <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.65rem] lg:pt-[3.7rem] 2xl:pt-[8.7rem] pl-1 md:pl-2">[2022]</p>
-            </div></Slide>
-            <Slide :key="1"><div class="carousel__item">
-                <h1 class="text-3xl sm:text-[2.5rem] md:text-4xl lg:text-5xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">GREECE</h1>
-                <h1 class="text-6xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl font-oswald float-left">CORFU</h1>
-                <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.65rem] lg:pt-[3.7rem] 2xl:pt-[8.7rem] pl-1 md:pl-2">[2022]</p>
-            </div></Slide>
-            <Slide :key="2"><div class="carousel__item">
-                <h1 class="text-3xl sm:text-[2.5rem] md:text-4xl lg:text-5xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">GREECE</h1>
-                <h1 class="text-6xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl font-oswald float-left">SANTORINI</h1>
-                <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.65rem] lg:pt-[3.7rem] 2xl:pt-[8.7rem] pl-1 md:pl-2">[2022]</p>
+            <Slide v-for="[key, project] of projectData.entries()" :key="key"><div class="carousel__item">
+                <h1 class="text-3xl sm:text-[2.5rem] md:text-4xl lg:text-5xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">{{ project.country }}</h1>
+                <h1 class="text-6xl sm:text-6xl md:text-6xl lg:text-7xl 2xl:text-9xl font-oswald float-left">{{ project.location }}</h1>
+                <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.65rem] lg:pt-[3.7rem] 2xl:pt-[8.7rem] pl-1 md:pl-2">[{{ project.year }}]</p>
             </div></Slide>
         </Carousel>
         <div class="next-arrow fixed right-[5vw] bottom-[55vh] sm:bottom-[60vh] cursor-pointer pb-1" @click="slideTo(currentSlide + 1)">
@@ -52,6 +42,27 @@ import "../css/carousel.css"
 
 const isDesktop = useMediaQuery('(min-width: 640px)')
 
+const projectData = [
+    {
+        'location': 'CALIFORNIA',
+        'country': 'USA',
+        'year': '2022',
+        'thumbnailImage': '_MG_7395_browsable.jpg',
+    },
+    {
+        'location': 'CORFU',
+        'country': 'GREECE',
+        'year': '2022',
+        'thumbnailImage': '_MG_7015_browsable.jpg',
+    },
+    {
+        'location': 'SANTORINI',
+        'country': 'GREECE',
+        'year': '2022',
+        'thumbnailImage': '_MG_6320_browsable.jpg',
+    },
+]
+
 export default defineComponent({
   name: 'Projects',
   components: {
@@ -66,6 +77,7 @@ export default defineComponent({
         wrapAround: true,
         snapAlign: ((isDesktop.value) ? 'start' : 'start'),
     },
+    projectData: projectData,
   }),
   methods: {
     slideTo(val: number) {
