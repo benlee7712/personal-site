@@ -1,5 +1,5 @@
 <template>
-    <body>
+    <body class="overflow-hidden">
         <Carousel id="project_titles" :items-to-show="1" :wrap-around="true" v-model="currentSlide">
             <Slide :key="0"><div class="carousel__item">
                 <h1 class="text-3xl sm:text-[2.5rem] md:text-4xl lg:text-5xl 2xl:text-7xl 2xl:mb-[-1rem] font-cormorant font-light w-fit">USA</h1>
