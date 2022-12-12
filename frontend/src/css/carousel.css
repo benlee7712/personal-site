@@ -11,7 +11,7 @@
 }
 
 #thumbnails.carousel {
-  bottom: 12.5vh;
+  bottom: 18vh;
 }
 
 .carousel * {
@@ -134,7 +134,7 @@
 @media (min-width: 640px) {
   #thumbnails .carousel__item img {
     max-height: 50vh;
-    max-width: 37.5vw;
+    max-width: 42.5vw;
   }
   #thumbnails.carousel {
     bottom: 0;
