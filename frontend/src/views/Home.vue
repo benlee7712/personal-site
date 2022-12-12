@@ -7,7 +7,7 @@
                 <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.65rem] lg:pt-[3.7rem] 2xl:pt-[8.7rem] pl-1 md:pl-2">[{{ project.year }}]</p>
             </div></Slide>
         </Carousel>
-        <div class="next-arrow fixed right-[5vw] bottom-[55vh] sm:bottom-[60vh] cursor-pointer pb-1" @click="slideTo(currentSlide + 1)">
+        <div class="next-arrow fixed right-[5vw] bottom-[55vh] sm:bottom-[55vh] cursor-pointer pb-1" @click="slideTo(currentSlide + 1)">
             <img class="h-8 md:h-8 lg:h-10 2xl:h-16 px-2 float-right" src="@/assets/icons/next-arrow.svg">
             <h1 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-6xl font-outfit font-medium float-right pl-2 red-underline">ANOTHER</h1>
         </div>
