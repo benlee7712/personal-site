@@ -18,9 +18,9 @@ import { RouterLink, RouterView } from "vue-router";
           </div>
         </nav>
       </div>
-      <RouterLink to="/" class="flex w-1/2 justify-end content-end">
-        <h1 class="flex flex-none justify-end pr-4 sm:pr-8 md:pr-16 pb-2 md:pb-4 font-semibold font-oswald text-4xl md:text-5xl xl:text-7xl name-title">BEN LEE</h1>
-      </RouterLink>
+      <div class="flex flex-none w-1/2 justify-end content-end pr-4 sm:pr-8 md:pr-16 pb-2 md:pb-4">
+        <RouterLink to="/" class="font-semibold font-oswald text-4xl md:text-5xl xl:text-7xl name-title">BEN LEE</RouterLink>
+      </div>
     </div>
   </header>
   <RouterView class="selection:bg-dusty_red"/>
