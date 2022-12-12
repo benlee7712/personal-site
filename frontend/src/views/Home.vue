@@ -28,7 +28,7 @@
             </div></Slide>
         </Carousel>
         <div class="flex fixed bottom-0 sm:hidden w-full justify-center items-start h-[18vh] pt-[5vh]">
-            <h1 class="text-dusty_red text-lg font-outfit underline underline-offset-4">SEE PROJECT</h1>
+            <h1 class="text-lg font-outfit red-underline">SEE PROJECT</h1>
         </div>
     </body>
 </template>
