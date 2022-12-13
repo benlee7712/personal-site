@@ -45,6 +45,17 @@ h1 {
 }
 
 .red-underline {
-    text-decoration: underline #E13F3F;
-    text-underline-offset: 4px;
+    border-bottom: 2px solid #E13F3F;
+}
+
+@media (min-width: 640px) {
+    .red-underline {
+        border-bottom: 3px solid #E13F3F;
+    }
+}
+
+@media (min-width: 1536px) {
+    .red-underline {
+        border-bottom: 4px solid #E13F3F;
+    }
 }

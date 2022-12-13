@@ -134,6 +134,7 @@
 @media (min-width: 640px) {
   #project_titles.carousel {
     bottom: 55vh;
+    padding-bottom: 4px;
   }
   #thumbnails .carousel__item img {
     max-height: 47.5vh;
@@ -141,5 +142,17 @@
   }
   #thumbnails.carousel {
     bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #project_titles.carousel {
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: 1536px) {
+  #project_titles.carousel {
+    padding-bottom: 0;
   }
 }
