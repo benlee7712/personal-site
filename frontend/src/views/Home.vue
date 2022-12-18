@@ -17,14 +17,8 @@
             v-model="currentSlide"
             ref="carousel"
         >
-            <Slide :key="0"><div class="carousel__item">
-                <img src="@/assets/images/_MG_7395_browsable.jpg">
-            </div></Slide>
-            <Slide :key="1"><div class="carousel__item">
-                <img src="@/assets/images/_MG_7015_browsable.jpg">
-            </div></Slide>
-            <Slide :key="2"><div class="carousel__item">
-                <img src="@/assets/images/_MG_6320_browsable.jpg">
+            <Slide v-for="[key, project] of projectData.entries()" :key="key"><div class="carousel__item">
+                <img :src="'@/images/' + project.thumbnailImage">
             </div></Slide>
         </Carousel>
         <div class="flex fixed bottom-0 sm:hidden w-full justify-center items-start h-[18vh] pt-[5vh]">
