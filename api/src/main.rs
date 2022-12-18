@@ -13,6 +13,9 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(|| App::new()
         .route("/", web::get().to(index))
+        .route("/about", web::get().to(index))
+        .route("/contact", web::get().to(index))
+        .route("/project", web::get().to(index))
         .service(Files::new("/", "../frontend/dist")))
             .bind("0.0.0.0:8080")?
             .run()
