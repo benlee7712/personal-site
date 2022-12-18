@@ -69,7 +69,7 @@ export default defineComponent({
     thumbnailCarouselSettings: {
         itemsToShow: ((isDesktop.value) ? 2.25 : 1.4),
         wrapAround: true,
-        snapAlign: ((isDesktop.value) ? 'start' : 'start'),
+        snapAlign: 'start',
     },
     projectData: projectData,
   }),
