@@ -18,7 +18,7 @@
             ref="carousel"
         >
             <Slide v-for="[key, project] of projectData.entries()" :key="key"><div class="carousel__item">
-                <img :src="'@/images/' + project.thumbnailImage">
+                <img :src="'images/' + project.thumbnailImage">
             </div></Slide>
         </Carousel>
         <div class="flex fixed bottom-0 sm:hidden w-full justify-center items-start h-[18vh] pt-[5vh]">
