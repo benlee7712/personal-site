@@ -4,7 +4,7 @@
             <Slide v-for="[key, project] of projectData.entries()" :key="key"><div class="carousel__item">
                 <h1 class="text-3xl md:text-3xl lg:text-[2.5rem] 2xl:text-6xl 2xl:mb-[-1rem] font-cormorant font-light italic w-fit">{{ project.country }}</h1>
                 <h1 class="text-6xl md:text-[4.25rem] lg:text-7xl 2xl:text-10xl font-oswald float-left">{{ project.location }}</h1>
-                <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.9rem] lg:pt-[3.7rem] 2xl:pt-[6.9rem] pl-1 md:pl-2">[{{ project.year }}]</p>
+                <p class="text-xs md:text-sm 2xl:text-lg font-outfit font-medium text-dusty_red float-left pt-[2.8rem] sm:pt-[2.8rem] md:pt-[2.9rem] lg:pt-[3.7rem] 2xl:pt-[6.65rem] pl-1 md:pl-2">[{{ project.year }}]</p>
             </div></Slide>
         </Carousel>
         <div class="next-arrow fixed right-[5vw] bottom-[55vh] sm:bottom-[55vh] cursor-pointer" @click="slideTo(currentSlide + 1)">
