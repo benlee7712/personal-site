@@ -1,6 +1,7 @@
 import Home from "../views/Home.vue"
 import Contact from "../views/Contact.vue";
 import About from "../views/About.vue";
+import Project from "../views/Project.vue";
 
 export default [
     {
@@ -22,6 +23,13 @@ export default [
         component: About,
         meta: {
           title: "About",
+        },
+    },
+    {
+        path: "/project",
+        component: Project,
+        meta: {
+          title: "Project",
         },
     },
 ];

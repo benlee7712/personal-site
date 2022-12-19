@@ -21,14 +21,15 @@
                 <img :src="'images/' + project.thumbnailImage">
             </div></Slide>
         </Carousel>
-        <div class="flex fixed bottom-0 sm:hidden w-full justify-center items-start h-[18vh] pt-[5vh]">
+        <RouterLink :to="{ path: '/project', query: { title: projectData[currentSlide % projectData.length].location }}" class="flex fixed bottom-0 sm:hidden w-full justify-center items-start h-[18vh] pt-[5vh]">
             <h1 class="text-lg font-outfit red-underline">SEE PROJECT</h1>
-        </div>
+        </RouterLink>
     </body>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { RouterLink} from "vue-router";
 import { Carousel, Slide } from 'vue3-carousel'
 import { useMediaQuery } from '@vueuse/core'
 
@@ -43,8 +44,9 @@ export default defineComponent({
   name: 'Projects',
   components: {
     Carousel,
-    Slide,
     Navigator,
+    RouterLink,
+    Slide,
   },
   data: () => ({
     currentSlide: 0,
