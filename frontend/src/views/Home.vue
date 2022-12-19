@@ -33,29 +33,11 @@ import { Carousel, Slide } from 'vue3-carousel'
 import { useMediaQuery } from '@vueuse/core'
 
 import "../css/carousel.css"
+import imageData from "../constants/imageData"
 
 const isDesktop = useMediaQuery('(min-width: 640px)')
 
-const projectData = [
-    {
-        'location': 'CALIFORNIA',
-        'country': 'USA',
-        'year': '2022',
-        'thumbnailImage': '_MG_7395_browsable.jpg',
-    },
-    {
-        'location': 'CORFU',
-        'country': 'GREECE',
-        'year': '2022',
-        'thumbnailImage': '_MG_7015_browsable.jpg',
-    },
-    {
-        'location': 'SANTORINI',
-        'country': 'GREECE',
-        'year': '2022',
-        'thumbnailImage': '_MG_6320_browsable.jpg',
-    },
-]
+const projectData = imageData.filter(image => image.isThumbnail === true)
 
 export default defineComponent({
   name: 'Projects',
