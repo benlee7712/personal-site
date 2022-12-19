@@ -10,6 +10,7 @@
 
 html {
     background-color: #FEF9F4;
+    scroll-behavior: smooth;
 }
 
 h1 {
