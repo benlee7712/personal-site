@@ -13,10 +13,10 @@
                 <div>
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
                     <div class="flex pt-1">
-                        <p class="font-outfit font-light text-xs 2xl:text-sm text-left w-1/2 whitespace-pre">
+                        <p class="font-outfit font-light text-2xs sm:text-xs 2xl:text-sm text-left w-1/2 whitespace-pre">
                           {{ `f/${exifData[key]?.tags?.FNumber}     ISO ${exifData[key]?.tags?.ISO}     ${exifData[key]?.tags?.FocalLength}mm` }}
                         </p>
-                        <p class="font-outfit font-light text-xs 2xl:text-sm text-right w-1/2 h-4 2xl:h-5 overflow-ellipsis">
+                        <p class="font-outfit font-light text-2xs sm:text-xs 2xl:text-sm text-right w-1/2 h-4 2xl:h-5 overflow-ellipsis">
                           {{ exifData[key]?.tags?.LensModel }}
                         </p>
                     </div>
