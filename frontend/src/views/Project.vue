@@ -70,6 +70,8 @@ export default defineComponent({
       },
       updateInnerHeight: function() {
           this.innerHeight = window.innerHeight;
+          let fp: any = this.$refs.fullpage
+          fp.build();
       }
   },
   created() {
