@@ -36,7 +36,6 @@ import axios from 'axios';
 import imageData from '../constants/imageData';
 
 
-const FULLPAGE_LICENSE = process.env.FULLPAGE_LICENSE
 var currentSection = 1
 
 
@@ -55,7 +54,7 @@ export default defineComponent({
       },
   },
   data: () => ({
-      licenseKey: FULLPAGE_LICENSE,
+      licenseKey: '9KZA7-ETX07-241IK-0Q37I-JJORP',
       currentSection: currentSection,
       exifData: Array<ExifData>(),
   }),
