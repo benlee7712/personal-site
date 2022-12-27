@@ -7,7 +7,7 @@
         }" ref="fullpage" id="fullpage">
             <section v-for="[key, image] in filteredImageData.entries()"
                 :key="key"
-                class="w-full h-screen px-[5vw] flex justify-center items-center section">
+                class="w-full h-full px-[5vw] flex justify-center items-center section">
                 <div>
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
                     <div class="flex pt-1">
