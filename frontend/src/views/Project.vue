@@ -11,19 +11,19 @@
                 <div>
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
                     <div class="flex pt-1">
-                        <p class="font-outfit font-light text-sm text-left w-1/2 whitespace-pre">
+                        <p class="font-outfit font-light text-xs 2xl:text-sm text-left w-1/2 whitespace-pre">
                           {{ `f/${exifData[key]?.tags?.FNumber}     ISO ${exifData[key]?.tags?.ISO}     ${exifData[key]?.tags?.FocalLength}mm` }}
                         </p>
-                        <p class="font-outfit font-light text-sm text-right w-1/2">
+                        <p class="font-outfit font-light text-xs 2xl:text-sm text-right w-1/2 h-4 2xl:h-5 overflow-ellipsis">
                           {{ exifData[key]?.tags?.LensModel }}
                         </p>
                     </div>
                 </div>
             </section>
         </full-page>
-        <div class="fixed bottom-0 pb-[7.5vh] w-full text-center z-10">
-            <h2 class="font-outfit font-semibold text-6xl">{{ String(currentSection).padStart(3, '0') }}</h2>
-            <h2 class="font-outfit font-normal text-3xl">{{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}</h2>
+        <div class="fixed bottom-0 pb-[10vh] w-full text-center z-10">
+            <h2 class="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl red-underline w-fit ml-[50%] translate-x-[-50%] translate-y-[-25%] pb-5%">{{ String(currentSection).padStart(3, '0') }}</h2>
+            <h2 class="font-outfit font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl">{{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}</h2>
         </div>
     </div>
 </template>
@@ -55,7 +55,7 @@ export default defineComponent({
       },
   },
   data: () => ({
-      licenseKey: '9KZA7-ETX07-241IK-0Q37I-JJORP',
+      licenseKey: FULLPAGE_LICENSE,
       currentSection: currentSection,
       exifData: Array<ExifData>(),
   }),
