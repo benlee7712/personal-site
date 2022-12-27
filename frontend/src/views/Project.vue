@@ -7,7 +7,8 @@
         }" ref="fullpage" id="fullpage">
             <section v-for="[key, image] in filteredImageData.entries()"
                 :key="key"
-                class="w-full h-full px-[5vw] flex justify-center items-center section">
+                class="w-full px-[5vw] flex justify-center items-center section"
+                :style="{'height': `${innerHeight}px`}">
                 <div>
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
                     <div class="flex pt-1">
@@ -37,7 +38,7 @@ import imageData from '../constants/imageData';
 
 
 var currentSection = 1
-
+var innerHeight = window.innerHeight;
 
 var gcd = function(a: number, b: number): number {
   if (b < 0.0000001) return a;
@@ -57,6 +58,7 @@ export default defineComponent({
       licenseKey: '9KZA7-ETX07-241IK-0Q37I-JJORP',
       currentSection: currentSection,
       exifData: Array<ExifData>(),
+      innerHeight: innerHeight,
   }),
   methods: {
       onLeave: function(origin: any, destination: any, direction: string, trigger: string) {
@@ -64,7 +66,16 @@ export default defineComponent({
       },
       setSection(key: number): void {
           this.currentSection = key
+      },
+      updateInnerHeight: function() {
+          this.innerHeight = window.innerHeight;
       }
+  },
+  created() {
+      window.addEventListener("resize", this.updateInnerHeight);
+  },
+  destroyed() {
+      window.removeEventListener("resize", this.updateInnerHeight);
   },
   mounted() {
       this.filteredImageData.forEach( (image, index: number) => {
