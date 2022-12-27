@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.6.0",
+    "axios": "^1.2.1",
+    "ts-exif-parser": "^0.2.2",
     "vue": "^3.2.33",
     "vue-fullpage.js": "^0.2.5",
     "vue-router": "^4.0.14",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
+    "@types/exif": "^0.6.3",
     "@types/node": "^16.18.10",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vue/eslint-config-prettier": "^7.0.0",
