@@ -5,19 +5,25 @@
           onLeave: onLeave,
           scrollBar: true,
         }" ref="fullpage" id="fullpage">
-            <section v-for="[key, image] in imageData.filter(image => image.location === title).entries()"
+            <section v-for="[key, image] in filteredImageData.entries()"
                 :key="key"
                 class="w-full h-screen px-[5vw] flex justify-center items-center section">
                 <div>
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
-                    <p class="font-outfit font-light text-sm" :id="'imageDetails' + key">
-                      {{ `f/${exifData[key]?.tags?.FNumber} ISO ${exifData[key]?.tags?.ISO} ${exifData[key]?.tags?.FocalLength}mm ${exifData[key]?.tags?.LensModel}` }}
-                    </p>
+                    <div class="flex pt-1">
+                        <p class="font-outfit font-light text-sm text-left w-1/2 whitespace-pre">
+                          {{ `f/${exifData[key]?.tags?.FNumber}     ISO ${exifData[key]?.tags?.ISO}     ${exifData[key]?.tags?.FocalLength}mm` }}
+                        </p>
+                        <p class="font-outfit font-light text-sm text-right w-1/2">
+                          {{ exifData[key]?.tags?.LensModel }}
+                        </p>
+                    </div>
                 </div>
             </section>
         </full-page>
-        <div class="fixed bottom-0 pb-[5vh] w-full text-center z-10 font-outfit font-semibold text-6xl">
-            <h2>{{ String(currentSection).padStart(3, '0') }}</h2>
+        <div class="fixed bottom-0 pb-[7.5vh] w-full text-center z-10">
+            <h2 class="font-outfit font-semibold text-6xl">{{ String(currentSection).padStart(3, '0') }}</h2>
+            <h2 class="font-outfit font-normal text-3xl">{{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}</h2>
         </div>
     </div>
 </template>
@@ -33,6 +39,7 @@ import imageData from '../constants/imageData';
 const FULLPAGE_LICENSE = process.env.FULLPAGE_LICENSE
 var currentSection = 1
 
+
 var gcd = function(a: number, b: number): number {
   if (b < 0.0000001) return a;
 
@@ -43,12 +50,11 @@ var gcd = function(a: number, b: number): number {
 export default defineComponent({
   name: 'Project',
   computed: {
-      title() {
-          return this.$route.query.title
+      filteredImageData() {
+          return imageData.filter(image => image.location === this.$route.query.title)
       },
   },
   data: () => ({
-      imageData: imageData,
       licenseKey: '9KZA7-ETX07-241IK-0Q37I-JJORP',
       currentSection: currentSection,
       exifData: Array<ExifData>(),
@@ -62,7 +68,7 @@ export default defineComponent({
       }
   },
   mounted() {
-      imageData.filter(image => image.location === this.title).forEach( (image, index: number) => {
+      this.filteredImageData.forEach( (image, index: number) => {
           var ref = this;
           axios.get(`images/${image.imagePath}`, { responseType: 'arraybuffer' }).then(response => {
               ref.exifData.push(ExifParserFactory.create(response.data).parse());
