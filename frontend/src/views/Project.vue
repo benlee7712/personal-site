@@ -66,7 +66,9 @@ export default defineComponent({
           this.currentSection = destination.index + 1
       },
       setSection(key: number): void {
-          this.currentSection = key
+          this.currentSection = key;
+          let fp: any = this.$refs.fullpage
+          fp.api.moveTo(key);
       },
       updateInnerHeight: function() {
           this.innerHeight = window.innerHeight;
@@ -81,12 +83,13 @@ export default defineComponent({
       window.removeEventListener("resize", this.updateInnerHeight);
   },
   mounted() {
-      this.filteredImageData.forEach( (image, index: number) => {
-          var ref = this;
-          axios.get(`images/${image.imagePath}`, { responseType: 'arraybuffer' }).then(response => {
-              ref.exifData.push(ExifParserFactory.create(response.data).parse());
-          });
-      });
+        this.setSection(1);
+        this.filteredImageData.forEach( (image, index: number) => {
+            var ref = this;
+            axios.get(`images/${image.imagePath}`, { responseType: 'arraybuffer' }).then(response => {
+                ref.exifData.push(ExifParserFactory.create(response.data).parse());
+            });
+        });
   }
 });
 </script>
