@@ -4,6 +4,7 @@
           licenseKey: licenseKey,
           onLeave: onLeave,
           scrollBar: true,
+          scrollOverflow: false,
         }" ref="fullpage" id="fullpage">
             <section v-for="[key, image] in filteredImageData.entries()"
                 :key="key"
