@@ -37,7 +37,7 @@
                 <a :href="'#photo' + (key + 1)" class="sideMenuItem"></a>
             </li>
         </ul>
-        <div class="fixed bottom-0 pb-[10vh] w-full text-center z-10">
+        <div class="fixed bottom-0 pb-[10vh] sm:pb-[8vh] w-full text-center z-10">
             <h2 class="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl red-underline w-fit ml-[50%] translate-x-[-50%] translate-y-[-25%] pb-5%">{{ String(currentSection).padStart(3, '0') }}</h2>
             <h2 class="font-outfit font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl">{{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}</h2>
         </div>
