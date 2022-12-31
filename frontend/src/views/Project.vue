@@ -25,7 +25,7 @@
                 </div>
             </section>
         </full-page>
-        <RouterLink to="/" class="next-arrow fixed left-[5vw] top-[10vh] sm:top-[12vh] cursor-pointer">
+        <RouterLink to="/" class="next-arrow fixed left-[5vw] top-[10vh] sm:top-[15vh] xl:top-[12.5vh] cursor-pointer">
             <img class="h-6 md:h-7 lg:h-7 2xl:h-10 px-2 float-left rotate-180" src="@/assets/icons/next-arrow.svg">
             <h1 class="text-lg md:text-xl lg:text-2xl 2xl:text-4xl font-outfit font-medium float-left red-underline">BACK</h1>
         </RouterLink>
