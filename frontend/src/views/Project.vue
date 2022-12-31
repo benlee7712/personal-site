@@ -25,9 +25,9 @@
                 </div>
             </section>
         </full-page>
-        <RouterLink to="/" class="next-arrow fixed left-[5vw] top-[10vh] sm:top-[15vh] cursor-pointer">
-            <img class="h-8 md:h-8 lg:h-10 2xl:h-16 px-2 float-left rotate-180" src="@/assets/icons/next-arrow.svg">
-            <h1 class="text-2xl md:text-3xl lg:text-4xl 2xl:text-6xl font-outfit font-medium float-left red-underline">BACK</h1>
+        <RouterLink to="/" class="next-arrow fixed left-[5vw] top-[10vh] sm:top-[12vh] cursor-pointer">
+            <img class="h-6 md:h-7 lg:h-7 2xl:h-10 px-2 float-left rotate-180" src="@/assets/icons/next-arrow.svg">
+            <h1 class="text-lg md:text-xl lg:text-2xl 2xl:text-4xl font-outfit font-medium float-left red-underline">BACK</h1>
         </RouterLink>
         <ul id="sideMenu" class="fixed right-[3vw] top-[50vh] translate-y-[-50%]">
             <li v-for="key in filteredImageData.keys()"
