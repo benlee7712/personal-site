@@ -16,7 +16,7 @@
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
                     <div class="flex pt-1">
                         <p class="font-outfit font-light text-2xs sm:text-xs 2xl:text-sm text-left w-1/2 whitespace-pre">
-                          {{ `f/${exifData[key]?.tags?.FNumber}     ISO ${exifData[key]?.tags?.ISO}     ${exifData[key]?.tags?.FocalLength}mm` }}
+                          {{ `f/${exifData[key]?.tags?.FNumber}     ${floatToFraction(exifData[key]?.tags?.ExposureTime)}s     ${exifData[key]?.tags?.FocalLength}mm     ` }}
                         </p>
                         <p class="font-outfit font-light text-2xs sm:text-xs 2xl:text-sm text-right w-1/2 h-4 2xl:h-5 overflow-ellipsis">
                           {{ exifData[key]?.tags?.LensModel }}
@@ -63,9 +63,30 @@ var gcd = function(a: number, b: number): number {
   return gcd(b, Math.floor(a % b));
 };
 
+var floatToFraction = function(float: number): String {
+    if (typeof float !== "number") {
+        return "NaN"
+    }
+
+    var len = String(float).length - 2;
+
+    var denominator = Math.pow(10, len);
+    var numerator = float * denominator;
+
+    var divisor = gcd(numerator, denominator);
+
+    numerator /= divisor;
+    denominator /= divisor;
+
+    return Math.floor(numerator) + '/' + Math.floor(denominator);
+}
+
 
 export default defineComponent({
   name: 'Project',
+  components: {
+    RouterLink
+  },
   computed: {
       filteredImageData() {
           return imageData.filter(image => image.location === this.$route.query.title)
@@ -90,7 +111,8 @@ export default defineComponent({
           this.innerHeight = window.innerHeight;
           let fp: any = this.$refs.fullpage
           fp.build();
-      }
+      },
+      floatToFraction,
   },
   created() {
       window.addEventListener("resize", this.updateInnerHeight);
