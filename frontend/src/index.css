@@ -11,6 +11,7 @@
 html {
     background-color: #FEF9F4;
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 h1 {
