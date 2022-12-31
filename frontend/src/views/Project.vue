@@ -12,9 +12,9 @@
                 :key="key"
                 class="w-full px-[10vw] flex justify-center items-center section"
                 :style="{'height': `${innerHeight}px`}">
-                <div>
+                <div class="flex flex-col items-center">
                     <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
-                    <div class="flex pt-1">
+                    <div class="flex pt-1 w-full">
                         <p class="font-outfit font-light text-2xs sm:text-xs 2xl:text-sm text-left w-1/2 whitespace-pre">
                           {{ `f/${exifData[key]?.tags?.FNumber}     ${floatToFraction(exifData[key]?.tags?.ExposureTime)}s     ${exifData[key]?.tags?.FocalLength}mm     ` }}
                         </p>
