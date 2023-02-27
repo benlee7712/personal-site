@@ -1,6 +1,6 @@
 const imageData = [
     {
-        "location": "WAYALAILAI",
+        "location": "VITI LEVU",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_7890_browsable.jpg",
@@ -10,15 +10,15 @@ const imageData = [
         "location": "WAYALAILAI",
         "country": "FIJI",
         "year": "2023",
-        "imagePath": "_MG_7955_browsable.jpg",
-        "isThumbnail": false
+        "imagePath": "_MG_7956_browsable.jpg",
+        "isThumbnail": true
     },
     {
         "location": "WAYALAILAI",
         "country": "FIJI",
         "year": "2023",
-        "imagePath": "_MG_7956_browsable.jpg",
-        "isThumbnail": true
+        "imagePath": "_MG_7955_browsable.jpg",
+        "isThumbnail": false
     },
     {
         "location": "WAYALAILAI",
