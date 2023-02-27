@@ -58,9 +58,10 @@ import imageData from '../constants/imageData';
 var innerHeight = window.innerHeight;
 
 var gcd = function(a: number, b: number): number {
-  if (b < 0.0000001) return a;
+    if (b < 0.001) return a;
+    if (a < 0.001) return b;
 
-  return gcd(b, Math.floor(a % b));
+    return gcd(a, a % b);
 };
 
 var floatToFraction = function(float: number): String {
@@ -73,7 +74,7 @@ var floatToFraction = function(float: number): String {
     var denominator = Math.pow(10, len);
     var numerator = float * denominator;
 
-    var divisor = gcd(numerator, denominator);
+    var divisor = Math.floor(gcd(numerator, denominator));
 
     numerator /= divisor;
     denominator /= divisor;
