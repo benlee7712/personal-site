@@ -18,7 +18,7 @@
             ref="carousel"
         >
             <Slide v-for="[key, project] of projectData.entries()" :key="key"><div class="carousel__item">
-                <RouterLink :to="{ path: '/project', query: { title: projectData[currentSlide % projectData.length].location }}">
+                <RouterLink :to="{ path: '/project', query: { title: projectData[key % projectData.length].location }}">
                   <img :src="'images/' + project.imagePath">
                 </RouterLink>
             </div></Slide>
