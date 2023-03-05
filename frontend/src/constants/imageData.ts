@@ -10,7 +10,7 @@ const imageData = [
         "location": "VITI LEVU",
         "country": "FIJI",
         "year": "2023",
-        "imagePath": "_MG_7890_browsable.jpg",
+        "imagePath": "_MG_8291_browsable.jpg",
         "isThumbnail": false
     },
     {
@@ -32,6 +32,34 @@ const imageData = [
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8299_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "VITI LEVU",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8280_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "VITI LEVU",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8402_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "VITI LEVU",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8391_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "VITI LEVU",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8308_browsable.jpg",
         "isThumbnail": false
     },
     {
