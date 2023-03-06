@@ -17,13 +17,6 @@ const imageData = [
         "location": "VITI LEVU",
         "country": "FIJI",
         "year": "2023",
-        "imagePath": "_MG_8270_browsable.jpg",
-        "isThumbnail": false
-    },
-    {
-        "location": "VITI LEVU",
-        "country": "FIJI",
-        "year": "2023",
         "imagePath": "_MG_8273_browsable.jpg",
         "isThumbnail": false
     },
