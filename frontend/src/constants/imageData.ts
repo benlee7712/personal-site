@@ -56,6 +56,34 @@ const imageData = [
         "isThumbnail": false
     },
     {
+        "location": "MAMANUCAS",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8466_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "MAMANUCAS",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8475_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "MAMANUCAS",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8498_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "MAMANUCAS",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8523_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
         "location": "VITI LEVU",
         "country": "FIJI",
         "year": "2023",
