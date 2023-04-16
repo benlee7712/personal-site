@@ -1,55 +1,55 @@
 const imageData = [
     {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
+        "country": "FIJI",
+        "year": "2023",
+        "imagePath": "_MG_8437_browsable.jpg",
+        "isThumbnail": true
+    },
+    {
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8421_browsable.jpg",
         "isThumbnail": false
     },
     {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8431_browsable.jpg",
         "isThumbnail": false
     },
     {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8435_browsable.jpg",
         "isThumbnail": false
     },
     {
-        "location": "MAMANUCA ISLANDS",
-        "country": "FIJI",
-        "year": "2023",
-        "imagePath": "_MG_8437_browsable.jpg",
-        "isThumbnail": false
-    },
-    {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8442_browsable.jpg",
         "isThumbnail": false
     },
     {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8449_browsable.jpg",
         "isThumbnail": false
     },
     {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8452_browsable.jpg",
-        "isThumbnail": true
+        "isThumbnail": false
     },
     {
-        "location": "MAMANUCA ISLANDS",
+        "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
         "imagePath": "_MG_8462_browsable.jpg",
