@@ -61,3 +61,44 @@ h1 {
         border-bottom: 4px solid #E13F3F;
     }
 }
+
+.text-overlay {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-clip: content-box;
+    padding-left: 5vw;
+    color: #FEF9F4;
+    text-decoration: underline #E13F3F 1px solid;
+    text-underline-offset: 2px;
+    transition: 0.3s;
+}
+
+.text-overlay h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+}
+
+.text-overlay:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.text-overlay:hover {
+    opacity: 1;
+}
+
+.text-overlay:hover .link-underline {
+    background-size: 100% 10%;
+}

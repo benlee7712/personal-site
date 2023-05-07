@@ -47,6 +47,7 @@
 #thumbnails .carousel__item img {
   max-height: 32vh;
   max-width: 70vw;
+  display: block;
   padding-left: 5vw;
   cursor: pointer;
   opacity: 0.4;
