@@ -13,7 +13,24 @@
                 class="w-full px-[10vw] flex justify-center items-center section"
                 :style="{'height': `${innerHeight}px`}">
                 <div class="flex flex-col items-center">
-                    <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]">
+                    <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]" @click="fullScreenImages[key] = true">
+                    <v-overlay v-model="fullScreenImages[key]">
+                        <div class="w-screen h-screen overflow-hidden flex justify-center items-center" @click="fullScreenImages[key] = false">
+                            <div class="flex-col items-center text-center">
+                                <v-img :src="'images/' + image.imagePath" max-height="80vh" width="85vw">
+                                    <template v-slot:placeholder>
+                                        <div class="d-flex align-center justify-center fill-height">
+                                            <v-progress-circular
+                                            color="grey-lighten-4"
+                                            indeterminate
+                                            ></v-progress-circular>
+                                        </div>
+                                    </template>
+                                </v-img>
+                                <v-chip class="mt-4" variant="elevated">Displaying at lower resolution for copyright reasons</v-chip>
+                            </div>
+                        </div>
+                    </v-overlay>
                     <div class="flex pt-1 w-full">
                         <p class="font-outfit font-light text-2xs sm:text-xs 2xl:text-sm text-left w-1/2 whitespace-pre">
                           {{ `f/${exifData[key]?.tags?.FNumber}     ${floatToFraction(exifData[key]?.tags?.ExposureTime)}s     ${exifData[key]?.tags?.FocalLength}mm     ` }}
@@ -98,6 +115,7 @@ export default defineComponent({
       currentSection: 1,
       exifData: Array<ExifData>(),
       innerHeight: innerHeight,
+      fullScreenImages: Array<boolean>(),
   }),
   methods: {
       onLeave: function(origin: any, destination: any, direction: string, trigger: string) {

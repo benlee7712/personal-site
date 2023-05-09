@@ -79,6 +79,7 @@ h1 {
     text-decoration: underline #E13F3F 1px solid;
     text-underline-offset: 2px;
     transition: 0.3s;
+    padding-inline-end: 0;
 }
 
 .text-overlay h2 {
