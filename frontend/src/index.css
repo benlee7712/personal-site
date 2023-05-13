@@ -46,6 +46,10 @@ h1 {
     background-size: 100% 10%;
 }
 
+.lapis-link-underline {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#6F5FFF, #6F5FFF);
+}
+
 .red-underline {
     border-bottom: 2px solid #E13F3F;
 }

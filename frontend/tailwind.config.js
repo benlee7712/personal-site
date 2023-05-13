@@ -25,6 +25,8 @@ module.exports = {
       '7xl': ['5rem', '5rem'],
       '8xl': ['6rem', '6.5rem'],
       '10xl': ['8rem', '8.5rem'],
+      '11xl': ['10rem', '10.5rem'],
+      '12xl': ['12rem', '12.5rem'],
     },
     colors: {
       coral: '#FF6F5F',
