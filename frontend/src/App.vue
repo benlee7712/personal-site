@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header class="mt-0 fixed w-full z-10 top-0 pt-2 lg:pt-3 xl:pt-4">
+  <header class="mt-0 fixed w-full z-10 top-0 pt-2 lg:pt-3 xl:pt-4 bg-off_white">
     <div class="flex-wrap flex mx-auto" style="border-bottom: 1px solid #979797;">
       <div class="flex w-1/2 content-start justify-start pl-[calc(5vw-8px)] pb-2 lg:pb-3 xl:pb-4 z-15">
         <nav class="list-reset flex justify-between flex-none items-end">

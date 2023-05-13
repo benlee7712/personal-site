@@ -35,6 +35,7 @@ module.exports = {
       lapis: '#6F5FFF',
       slate: '#222',
       white: '#FFF',
+      off_white: '#FEF9F4',
     },
     extend: {},
   },
