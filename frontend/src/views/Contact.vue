@@ -153,7 +153,10 @@
           ]
         }
         let valid = await this.$refs.form.validate()
+
         this.$nextTick(() => {
+          var form = this.$refs.form;
+          var that = this;
           if (valid.valid) {
             axios.post('/submit-contact-form', {
               name: this.name,
@@ -161,10 +164,10 @@
               message_type: messageTypeMap[this.message_type ?? 2],
               message: this.message,
             })
-            .then(function (_) {
-              this.$refs.form.resetValidation();
-              this.$refs.form.reset();
-              this.message_type = null;
+            .then(function (_response) {
+              form.resetValidation();
+              form.reset();
+              that.message_type = null;
             })
             .catch(function (error) {
               console.log(error);
