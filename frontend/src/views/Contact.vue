@@ -73,7 +73,12 @@
                 color="#E13F3F"
                 @click="submit"
               >
-                Send
+                <span v-if="sending === false">Send</span>
+                <v-progress-circular
+                color="grey-lighten-4"
+                indeterminate
+                v-if="sending === true"
+                ></v-progress-circular>
               </v-btn>
             </v-col>
           </v-row>
@@ -132,6 +137,7 @@
       email: '',
       message: '',
       message_type: null,
+      sending: false,
     }),
 
     methods: {
@@ -158,6 +164,7 @@
           var form = this.$refs.form;
           var that = this;
           if (valid.valid) {
+            that.sending = true;
             axios.post('/submit-contact-form', {
               name: this.name,
               email: this.email,
@@ -168,6 +175,7 @@
               form.resetValidation();
               form.reset();
               that.message_type = null;
+              that.sending = false;
             })
             .catch(function (error) {
               console.log(error);
