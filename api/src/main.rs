@@ -4,6 +4,7 @@ use actix_cors::Cors;
 use lettre::transport::smtp::authentication::Credentials;
 use lettre::{Message, SmtpTransport, Transport};
 use serde::Deserialize;
+use std::env;
 use std::path::PathBuf;
 
 
@@ -30,9 +31,9 @@ async fn send_email(form: web::Json<SendEmail>) -> impl Responder {
     .body(String::from(&form.message))
     .unwrap();
 
-    let creds: Credentials = Credentials::new("ben@benlee.site".to_string(), "m25wT#tBJ94XZ4W".to_string());
+    let creds: Credentials = Credentials::new("ben@benlee.site".to_string(), env::var("EMAIL_PASSWORD").is_ok().to_string());
 
-    let mailer: SmtpTransport = SmtpTransport::relay("smtp.privateemail.com")
+    let mailer: SmtpTransport = SmtpTransport::relay(env::var("SMTP_SERVER").is_ok())
     .unwrap()
     .credentials(creds)
     .build();
