@@ -73,7 +73,7 @@
                 color="#E13F3F"
                 @click="submit"
               >
-                <span v-if="sending === false">Send</span>
+                <span v-if="sending === false">{{ buttonText }}</span>
                 <v-progress-circular
                 color="grey-lighten-4"
                 indeterminate
@@ -138,6 +138,7 @@
       message: '',
       message_type: null,
       sending: false,
+      buttonText: 'Send',
     }),
 
     methods: {
@@ -176,9 +177,13 @@
               form.reset();
               that.message_type = null;
               that.sending = false;
+              that.buttonText = 'Send';
             })
             .catch(function (error) {
               console.log(error);
+              alert('Message sending failed');
+              that.sending = false;
+              that.buttonText = 'Retry';
             });
           }
         })
