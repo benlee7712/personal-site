@@ -7,6 +7,7 @@ RUN apt-get update && apt-get -y install ca-certificates cmake pkg-config musl-t
 RUN rustup target add x86_64-unknown-linux-musl
 ENV PKG_CONFIG_ALLOW_CROSS=1
 ENV OPENSSL_DIR=/usr/local/opt/openssl/bin/openssl
+ENV OPENSSL_LIB_DIR=/usr/local/opt/openssl/lib
 
 RUN cargo build --target x86_64-unknown-linux-musl --release
 WORKDIR /..
