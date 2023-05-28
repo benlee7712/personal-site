@@ -3,9 +3,10 @@ FROM rust:1.69
 COPY . .
 
 WORKDIR /api
-RUN apt-get update && apt-get -y install ca-certificates cmake pkg-config musl-tools libssl-dev
+RUN apt-get update && apt-get -y install ca-certificates cmake pkg-config musl-tools libssl-dev && rm -rf /var/lib/apt/lists/*
 RUN rustup target add x86_64-unknown-linux-musl
 ENV PKG_CONFIG_ALLOW_CROSS=1
+ENV OPENSSL_DIR=/usr/local/opt/openssl/bin/openssl
 
 RUN cargo build --target x86_64-unknown-linux-musl --release
 WORKDIR /..
