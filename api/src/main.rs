@@ -31,9 +31,9 @@ async fn send_email(form: web::Json<SendEmail>) -> impl Responder {
     .body(String::from(&form.message))
     .unwrap();
 
-    let creds: Credentials = Credentials::new("ben@benlee.site".to_string(), env::var("EMAIL_PASSWORD").is_ok().to_string());
+    let creds: Credentials = Credentials::new("ben@benlee.site".to_string(), env::var("EMAIL_PASSWORD").unwrap().to_string());
 
-    let mailer: SmtpTransport = SmtpTransport::relay(env::var("SMTP_SERVER").is_ok())
+    let mailer: SmtpTransport = SmtpTransport::relay(env::var("SMTP_SERVER").unwrap())
     .unwrap()
     .credentials(creds)
     .build();
