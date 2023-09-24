@@ -10,6 +10,13 @@ const imageData = [
         "location": "ROTTERDAM",
         "country": "NETHERLANDS",
         "year": "2023",
+        "imagePath": "_MG_8846_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
         "imagePath": "_MG_8803_browsable.jpg",
         "isThumbnail": false
     },
@@ -25,6 +32,41 @@ const imageData = [
         "country": "NETHERLANDS",
         "year": "2023",
         "imagePath": "_MG_8822_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8797_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8839_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8841_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8811_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8837_browsable.jpg",
         "isThumbnail": false
     },
     {
