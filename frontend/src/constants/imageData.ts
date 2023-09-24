@@ -1,5 +1,33 @@
 const imageData = [
     {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8830_browsable.jpg",
+        "isThumbnail": true
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8803_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8767_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
+        "location": "ROTTERDAM",
+        "country": "NETHERLANDS",
+        "year": "2023",
+        "imagePath": "_MG_8822_browsable.jpg",
+        "isThumbnail": false
+    },
+    {
         "location": "MAMANUCAS",
         "country": "FIJI",
         "year": "2023",
