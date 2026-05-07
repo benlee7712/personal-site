@@ -22,7 +22,7 @@
                   <span class="text-overlay">
                     <h2 class="text-lg font-outfit link-underline">SEE PHOTOS</h2>
                   </span>
-                  <img :src="'images/' + project.imagePath" class="simple-box-shadow">
+                  <img :src="'images/' + project.imagePath">
                 </RouterLink>
             </div></Slide>
         </Carousel>

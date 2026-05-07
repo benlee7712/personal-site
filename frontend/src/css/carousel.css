@@ -48,7 +48,7 @@
   max-height: 32vh;
   max-width: 70vw;
   display: block;
-  margin-left: 5vw;
+  padding-left: 5vw;
   cursor: pointer;
   opacity: 0.4;
 }
