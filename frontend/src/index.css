@@ -95,7 +95,7 @@ h1 {
     position: absolute;
     height: 100%;
     text-align: center;
-    width: 100%;
+    width: calc(100% - 5vw);
     left: 0;
     top: 0;
     right: 0;
@@ -103,7 +103,7 @@ h1 {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.4);
     background-clip: content-box;
-    padding-left: 5vw;
+    margin-left: 5vw;
     color: #FEF9F4;
     text-decoration: underline #E13F3F 1px solid;
     text-underline-offset: 2px;
@@ -115,7 +115,7 @@ h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .text-overlay:before {
