@@ -24,14 +24,17 @@ async fn index(_req: HttpRequest) -> Result<NamedFile> {
 #[post("/submit-contact-form")]
 async fn send_email(form: web::Json<SendEmail>) -> impl Responder {
     let email: Message = Message::builder()
-    .from("Ben <ben@benlee.site>".parse().unwrap())
-    .to("Ben <ben@benlee.site>".parse().unwrap())
+    .from("Ben <ben@benlee.work>".parse().unwrap())
+    .to("Ben <ben@benlee.work>".parse().unwrap())
     .reply_to(format!("<{}>", form.email).parse().unwrap())
     .subject(format!("{}: {}", &form.name, &form.message_type))
     .body(String::from(&form.message))
     .unwrap();
 
-    let creds: Credentials = Credentials::new("ben@benlee.site".to_string(), env::var("EMAIL_PASSWORD").unwrap().to_string());
+    let creds: Credentials = Credentials::new(
+        env::var("EMAIL_ADDRESS").unwrap().to_string(),
+        env::var("EMAIL_PASSWORD").unwrap().to_string()
+    );
 
     let mailer: SmtpTransport = SmtpTransport::relay(&env::var("SMTP_SERVER").unwrap())
     .unwrap()
