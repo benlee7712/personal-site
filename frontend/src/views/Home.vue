@@ -20,14 +20,14 @@
             <Slide v-for="[key, project] of projectData.entries()" :key="key"><div class="carousel__item">
                 <RouterLink :to="{ path: '/project', query: { title: projectData[key % projectData.length].location }}" class="relative inline-block">
                   <span class="text-overlay">
-                    <h2 class="text-lg font-outfit link-underline">SEE PROJECT</h2>
+                    <h2 class="text-lg font-outfit link-underline">SEE PHOTOS</h2>
                   </span>
                   <img :src="'images/' + project.imagePath">
                 </RouterLink>
             </div></Slide>
         </Carousel>
         <RouterLink :to="{ path: '/project', query: { title: projectData[currentSlide % projectData.length].location }}" class="flex fixed bottom-0 w-full justify-center items-start sm:items-center h-[18vh] sm:h-[8vh] pt-[5vh] sm:pt-0">
-            <h1 class="text-lg font-outfit red-underline">{{ `SEE THE ${projectData[currentSlide % projectData.length].location} PROJECT`}}</h1>
+            <h1 class="text-lg font-outfit red-border-box">{{ `VIEW ${projectData[currentSlide % projectData.length].location} PHOTOS`}}</h1>
         </RouterLink>
     </body>
 </template>

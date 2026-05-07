@@ -54,15 +54,40 @@ h1 {
     border-bottom: 2px solid #E13F3F;
 }
 
+.red-border-box {
+    border: 2px solid #E13F3F;
+    padding: 2px 4px;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#E13F3F, #E13F3F);
+    background-size: 0px 0px;
+    background-size: 0 100%;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.red-border-box:hover {
+    background-size: 100% 100%;
+}
+
 @media (min-width: 640px) {
     .red-underline {
         border-bottom: 3px solid #E13F3F;
+    }
+
+    .red-border-box {
+        border: 2px solid #E13F3F;
+        padding: 3px 6px;
     }
 }
 
 @media (min-width: 1536px) {
     .red-underline {
         border-bottom: 4px solid #E13F3F;
+    }
+
+    .red-border-box {
+        border: 2px solid #E13F3F;
+        padding: 3px 6px;
     }
 }
 
