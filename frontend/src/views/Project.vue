@@ -10,10 +10,10 @@
         }" ref="fullpage" id="fullpage">
             <section v-for="[key, image] in filteredImageData.entries()"
                 :key="key"
-                class="w-full px-[10vw] flex justify-center items-center section"
+                class="w-full px-[10vw] flex justify-center items-center section z-[8]"
                 :style="{'height': `${innerHeight}px`}">
                 <div class="flex flex-col items-center">
-                    <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh]" @click="fullScreenImages[key] = true">
+                    <img :id="'img' + key" :src="'images/' + image.imagePath" class="max-w-full max-h-[50vh] simple-box-shadow" @click="fullScreenImages[key] = true">
                     <v-overlay v-model="fullScreenImages[key]">
                         <div class="w-screen h-screen overflow-hidden flex justify-center items-center" @click="fullScreenImages[key] = false">
                             <div class="flex-col items-center text-center">
@@ -42,7 +42,7 @@
                 </div>
             </section>
         </full-page>
-        <RouterLink to="/" class="next-arrow fixed left-[5vw] top-[10vh] sm:top-[15vh] xl:top-[12.5vh] cursor-pointer">
+        <RouterLink to="/" class="next-arrow fixed left-[5vw] top-[10vh] sm:top-[15vh] xl:top-[12.5vh] cursor-pointer z-10">
             <img class="h-6 md:h-7 lg:h-7 2xl:h-10 px-2 float-left rotate-180" src="@/assets/icons/next-arrow.svg">
             <h1 class="text-lg md:text-xl lg:text-2xl 2xl:text-4xl font-outfit font-medium float-left red-underline">BACK</h1>
         </RouterLink>
@@ -54,9 +54,13 @@
                 <a :href="'#photo' + (key + 1)" class="sideMenuItem"></a>
             </li>
         </ul>
-        <div class="fixed bottom-0 pb-[10vh] sm:pb-[8vh] w-full text-center z-10">
-            <h2 class="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl red-underline w-fit ml-[50%] translate-x-[-50%] translate-y-[-25%] pb-5%">{{ String(currentSection).padStart(3, '0') }}</h2>
-            <h2 class="font-outfit font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl">{{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}</h2>
+        <div class="fixed bottom-0 pb-[10vh] sm:pb-[8vh] w-full text-center z-1">
+            <h2 class="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl red-underline w-fit ml-[50%] translate-x-[-50%] translate-y-[-25%] pb-5% simple-text-shadow">
+                {{ String(currentSection).padStart(3, '0') }}
+            </h2>
+            <h2 class="font-outfit font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl simple-text-shadow w-fit ml-[50%] translate-x-[-50%]">
+                {{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}
+            </h2>
         </div>
     </div>
 </template>

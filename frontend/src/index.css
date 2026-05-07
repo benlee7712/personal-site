@@ -132,3 +132,11 @@ h1 {
 .text-overlay:hover .link-underline {
     background-size: 100% 10%;
 }
+
+.simple-text-shadow {
+    text-shadow: rgba(0, 0, 0, 0.1) 2px 3px 6px;
+}
+
+.simple-box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 8px;
+}

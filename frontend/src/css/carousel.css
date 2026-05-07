@@ -41,14 +41,14 @@
 }
 
 #project_titles .carousel__item {
-  padding: 0 5vw;
+  margin: 0 5vw;
 }
 
 #thumbnails .carousel__item img {
   max-height: 32vh;
   max-width: 70vw;
   display: block;
-  padding-left: 5vw;
+  margin-left: 5vw;
   cursor: pointer;
   opacity: 0.4;
 }
