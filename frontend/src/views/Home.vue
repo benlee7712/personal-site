@@ -26,7 +26,7 @@
                 </RouterLink>
             </div></Slide>
         </Carousel>
-        <RouterLink :to="{ path: '/project', query: { title: projectData[currentSlide % projectData.length].location }}" class="flex fixed bottom-0 w-full justify-center items-start sm:items-center h-[18vh] sm:h-[8vh] pt-[5vh] sm:pt-0">
+        <RouterLink :to="{ path: '/project', query: { title: projectData[currentSlide % projectData.length].location }}" class="flex fixed bottom-0 w-full items-start sm:items-center h-[18vh] sm:h-[8vh] pt-[5vh] sm:pt-0 pl-[5vw]">
             <h1 class="text-lg font-outfit red-border-box">{{ `VIEW ${projectData[currentSlide % projectData.length].location} PHOTOS`}}</h1>
         </RouterLink>
     </body>
