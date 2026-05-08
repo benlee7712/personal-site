@@ -46,11 +46,14 @@
   margin: 0 5vw;
 }
 
+#thumbnails .carousel__item {
+  padding-left: 5vw;
+}
+
 #thumbnails .carousel__item img {
   max-height: 32vh;
   max-width: 70vw;
   display: block;
-  padding-left: 5vw;
   cursor: pointer;
   opacity: 0.4;
   filter: blur(2px);
@@ -114,6 +117,10 @@
 .carousel--rtl .carousel__next {
   right: auto;
   left: 0;
+}
+
+.carousel:not(.is-vertical) .carousel__slide--clone:first-child {
+  margin-inline-start: var(--vc-cloned-offset);
 }
 
 .carousel__slide {

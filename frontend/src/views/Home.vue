@@ -15,7 +15,7 @@
         </div>
         <Carousel
             id="thumbnails"
-            :settings="thumbnailCarouselSettings"
+            v-bind="thumbnailCarouselSettings"
             v-model="currentSlide"
             ref="carousel"
         >
@@ -58,9 +58,9 @@ export default defineComponent({
   data: () => ({
     currentSlide: 0,
     thumbnailCarouselSettings: {
-        itemsToShow: "auto", //((isDesktop.value) ? 2.25 : 1.4),
+        itemsToShow: "auto" as const,
         wrapAround: true,
-        snapAlign: "start",
+        snapAlign: "start" as const,
     },
     projectData: projectData,
   }),
