@@ -130,8 +130,6 @@ export default defineComponent({
             menu: '#sideMenu',
             lockAnchors: true,
             scrollingSpeed: '400',
-            easingcss3: 'cubic-bezier(0.86, 0, 0.14, 1)',
-            dragAndMove: true,
         };
     },
   },
