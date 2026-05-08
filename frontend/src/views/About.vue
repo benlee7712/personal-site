@@ -11,10 +11,10 @@
           <br/>
           <br/>
           &nbsp;&nbsp;&nbsp;&nbsp;As far as my photography is concerned, I'm heavily inspired by brutalist and minimalist photography by the likes of
-          <a href="https://www.josefhoflehner.com/works.html" class="link-underline text-dusty_red">Josef Hoflehner,</a>
+          <a href="https://www.josefhoflehner.com/works.html" class="link-underline text-dusty-red">Josef Hoflehner,</a>
           <a>&nbsp;</a>
-          <a href="https://www.instagram.com/shirrenlim/?hl=en" class="link-underline text-dusty_red">Shirren Lim</a>
-          and <a href="https://www.metmuseum.org/toah/hd/pstd/hd_pstd.htm" class="link-underline text-dusty_red">Paul Strand</a>, although
+          <a href="https://www.instagram.com/shirrenlim/?hl=en" class="link-underline text-dusty-red">Shirren Lim</a>
+          and <a href="https://www.metmuseum.org/toah/hd/pstd/hd_pstd.htm" class="link-underline text-dusty-red">Paul Strand</a>, although
           my subjects tend to be landscapes rather than the streets and architecture in their work. Having said that though, my main aim is to have a beautiful
           way in which to remember the things I've seen and done, so it follows that most of the work shown here is from various holidays I've been on over the
           years.

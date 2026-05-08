@@ -1,13 +1,11 @@
 <template>
     <div>
-        <full-page :options="{
-          licenseKey: licenseKey,
-          onLeave: onLeave,
-          scrollBar: true,
-          scrollOverflow: false,
-          anchors: Array.from(filteredImageData.keys()).map(index => String('photo' + (index + 1))),
-          menu: '#sideMenu',
-        }" ref="fullpage" id="fullpage">
+        <full-page
+            v-if="filteredImageData && filteredImageData.length"
+            :options="fpOptions"
+            ref="fullpage"
+            id="fullpage"
+        >
             <section v-for="[key, image] in filteredImageData.entries()"
                 :key="key"
                 class="w-full px-[10vw] flex justify-center items-center section z-[8]"
@@ -27,7 +25,16 @@
                                         </div>
                                     </template>
                                 </v-img>
-                                <v-chip class="mt-4" variant="elevated">Displaying at lower resolution for copyright reasons</v-chip>
+                                <v-card class="text-white font-outfit mt-[2.5vh] pa-4 w-full sm:w-[75%] xl:w-[50%] sm:ml-[12.5%] xl:ml-[25%]" variant="elevated" color="#424242">
+                                    <strong>{{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}:` }}</strong>
+                                    {{ `Image ${currentSection} / ${filteredImageData.length}` }}
+                                    <br>
+                                    <strong>Lens:</strong> {{ exifData[key]?.tags?.LensModel }}
+                                    <br>
+                                    <strong>Settings:</strong> {{ `f/${exifData[key]?.tags?.FNumber} | ${floatToFraction(exifData[key]?.tags?.ExposureTime)}s | ${exifData[key]?.tags?.FocalLength}mm` }}
+                                    <br>
+                                    <strong>Displaying at lower resolution for copyright reasons</strong>
+                                </v-card>
                             </div>
                         </div>
                     </v-overlay>
@@ -54,10 +61,7 @@
                 <a :href="'#photo' + (key + 1)" class="sideMenuItem"></a>
             </li>
         </ul>
-        <div class="fixed bottom-0 pb-[10vh] sm:pb-[8vh] w-full text-center z-1">
-            <h2 class="font-outfit font-semibold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl red-underline w-fit ml-[50%] translate-x-[-50%] translate-y-[-25%] pb-5% simple-text-shadow">
-                {{ String(currentSection).padStart(3, '0') }}
-            </h2>
+        <div class="fixed bottom-0 pb-[10vh] sm:pb-[12vh] w-full text-center z-1">
             <h2 class="font-outfit font-normal text-lg sm:text-xl lg:text-2xl xl:text-3xl simple-text-shadow w-fit ml-[50%] translate-x-[-50%]">
                 {{ `${filteredImageData[currentSection - 1].location}, ${filteredImageData[currentSection - 1].country}` }}
             </h2>
@@ -69,7 +73,7 @@
 import axios from 'axios';
 import { ExifParserFactory, ExifData } from "ts-exif-parser";
 import { defineComponent } from 'vue';
-import { RouterLink} from 'vue-router';
+import { RouterLink } from 'vue-router';
 
 import '../css/projects.css';
 
@@ -85,7 +89,7 @@ var gcd = function(a: number, b: number): number {
     return gcd(a, a % b);
 };
 
-var floatToFraction = function(float: number): String {
+var floatToFraction = function(float: number | undefined): String {
     if (typeof float !== "number") {
         return "NaN"
     }
@@ -110,12 +114,29 @@ export default defineComponent({
     RouterLink
   },
   computed: {
-      filteredImageData() {
-          return imageData.filter(image => image.location === this.$route.query.title)
-      },
+    anchors() {
+        return Array.from(this.filteredImageData.keys()).map(i => `photo${i + 1}`);
+    },
+    filteredImageData() {
+        return imageData.filter(image => image.location === this.$route.query.title)
+    },
+    fpOptions() {
+        return {
+            licenseKey: this.licenseKey,
+            onLeave: this.onLeave,
+            scrollBar: true,
+            scrollOverflow: false,
+            anchors: this.anchors,
+            menu: '#sideMenu',
+            lockAnchors: true,
+            scrollingSpeed: '400',
+            easingcss3: 'cubic-bezier(0.86, 0, 0.14, 1)',
+            dragAndMove: true,
+        };
+    },
   },
   data: () => ({
-      licenseKey: '9KZA7-ETX07-241IK-0Q37I-JJORP',
+      licenseKey: '8N1JI-ALT18-10IR8-5Q5CI-STSWO',
       currentSection: 1,
       exifData: Array<ExifData>(),
       innerHeight: innerHeight,
@@ -140,10 +161,29 @@ export default defineComponent({
   created() {
       window.addEventListener("resize", this.updateInnerHeight);
   },
-  destroyed() {
+  beforeUnmount() {
       window.removeEventListener("resize", this.updateInnerHeight);
+      // fullPage.js sets `position: relative` and `height: 100%` on all
+      // ancestors up to <body> in prepareDom(), but destroy('all') only
+      // cleans the container itself. Clear the persistent ancestors so that
+      // #app doesn't become the containing block for Home's absolute-
+      // positioned carousels (which would collapse them off-screen).
+      const container = document.getElementById('fullpage');
+      if (container) {
+          let el: HTMLElement | null = container.parentElement;
+          while (el && el !== document.documentElement) {
+              el.style.height = '';
+              el.style.position = '';
+              el = el.parentElement;
+          }
+      }
   },
   mounted() {
+        this.$nextTick(() => {
+            setTimeout(() => {
+            // fullPage init handled by component OR manual refresh
+            }, 0);
+        });
         this.setSection(1);
         this.filteredImageData.forEach( (image, index: number) => {
             var ref = this;

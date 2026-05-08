@@ -51,6 +51,7 @@
   padding-left: 5vw;
   cursor: pointer;
   opacity: 0.4;
+  filter: blur(2px);
 }
 
 #thumbnails .carousel__slide--sliding .carousel__item img {
@@ -59,6 +60,7 @@
 
 #thumbnails .carousel__slide--active .carousel__item img {
   opacity: 1;
+  filter: blur(0);
 }
 
 .carousel__prev,
@@ -121,8 +123,6 @@
   display: flex;
   justify-content: start;
   align-items: end;
-
-  width: auto;
 
   /* Fix iOS scrolling #22 */
   transform: translateZ(0);
