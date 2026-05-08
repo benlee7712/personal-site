@@ -23,6 +23,8 @@
   margin: 0;
   padding: 0;
   position: relative;
+  transition: transform var(--vc-transition-easing);
+  transition-duration: var(--vc-transition-duration);
 }
 
 .carousel__viewport {
