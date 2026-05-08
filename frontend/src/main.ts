@@ -31,7 +31,7 @@ const vuetify = createVuetify({
 const app = createApp(App);
 
 app.use(router);
-app.use(VueFullPage);
+app.use(VueFullPage, {});
 app.use(vuetify);
 
 app.mount("#app");
