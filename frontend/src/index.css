@@ -148,7 +148,7 @@ html {
     position: absolute;
     height: 100%;
     text-align: center;
-    width: calc(100% - 5vw);
+    width: 100%;
     left: 0;
     top: 0;
     right: 0;
@@ -156,12 +156,12 @@ html {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.4);
     background-clip: content-box;
-    margin-left: 5vw;
     color: #FEF9F4;
     text-decoration: underline #E13F3F 1px solid;
     text-underline-offset: 2px;
     transition: 0.3s;
     padding-inline-end: 0;
+    z-index: 20;
 }
 
 .text-overlay h2 {
