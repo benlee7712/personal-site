@@ -38,12 +38,9 @@
 import { defineComponent } from 'vue'
 import { RouterLink} from "vue-router";
 import { Carousel, Slide } from 'vue3-carousel'
-import { useMediaQuery } from '@vueuse/core'
 
 import "../css/carousel.css"
 import imageData from "../constants/imageData"
-
-const isDesktop = useMediaQuery('(min-width: 640px)')
 
 const projectData = imageData.filter(image => image.isThumbnail === true)
 
@@ -64,6 +61,17 @@ export default defineComponent({
     },
     projectData: projectData,
   }),
+  mounted() {
+    const firstImg = this.$el.querySelector('#thumbnails img') as HTMLImageElement | null
+    if (!firstImg) return
+    if (firstImg.complete) {
+      (this.$refs.carousel as any).restartCarousel()
+    } else {
+      firstImg.addEventListener('load', () => {
+        (this.$refs.carousel as any).restartCarousel()
+      }, { once: true })
+    }
+  },
   methods: {
     slideTo(val: number) {
       this.currentSlide = val
